@@ -10,5 +10,15 @@ public class MyWorld extends World
         
         Penguin linux = new Penguin();
         addObject(linux,300,300);
+        
+        createFish();
+    }
+    
+    //Create fish anywhere at the top of the screen
+    public void createFish(){
+        Fish fish = new Fish();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(fish,x,y);
     }
 }
