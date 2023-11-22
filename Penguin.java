@@ -13,6 +13,7 @@ public class Penguin extends Actor
             move(2);
         }
         
+        eat();
     }
     
     public void eat()
@@ -20,6 +21,8 @@ public class Penguin extends Actor
         if (isTouching(Fish.class))
         {
             removeTouching(Fish.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createFish();
         }
     }
 }
