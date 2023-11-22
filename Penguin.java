@@ -13,7 +13,13 @@ public class Penguin extends Actor
             move(2);
         }
         
-        //Removes fish when penguins touches it
-        removeTouching(Fish.class);
+    }
+    
+    public void eat()
+    {
+        if (isTouching(Fish.class))
+        {
+            removeTouching(Fish.class);
+        }
     }
 }
