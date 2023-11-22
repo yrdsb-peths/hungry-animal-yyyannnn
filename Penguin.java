@@ -16,6 +16,7 @@ public class Penguin extends Actor
         eat();
     }
     
+    //Will eat fish if touching and recreate it
     public void eat()
     {
         if (isTouching(Fish.class))
@@ -23,6 +24,7 @@ public class Penguin extends Actor
             removeTouching(Fish.class);
             MyWorld world = (MyWorld) getWorld();
             world.createFish();
+            world.increaseScore();
         }
     }
 }
