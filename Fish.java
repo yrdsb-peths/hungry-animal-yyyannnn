@@ -14,6 +14,16 @@ public class Fish extends Actor
      */
     public void act()
     {
+        // Fish falls downwards
         setLocation(getX(),getY()+2);
+        
+        // Game over when it gets to bottom
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() >= world.getHeight())
+        {
+            world.gameOver();
+            world.removeObject(this);
+        }
+        
     }
 }

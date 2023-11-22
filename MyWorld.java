@@ -8,7 +8,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(600, 400, 1, false);
         
         // Create the fish object
         Penguin linux = new Penguin();
@@ -19,6 +19,13 @@ public class MyWorld extends World
         addObject(scoreLabel,50,50);
         
         createFish();
+    }
+    
+    //End the game
+    public void gameOver()
+    {
+        Label gameOverLabel = new Label("Game Over", 100);
+        addObject(gameOverLabel,300,200);
     }
     
     // Increase score
