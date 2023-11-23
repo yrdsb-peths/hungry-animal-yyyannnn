@@ -6,11 +6,11 @@ public class Penguin extends Actor
     {
         if (Greenfoot.isKeyDown("left"))
         {
-            move(-2);
+            move(-5);
         }
         if (Greenfoot.isKeyDown("right"))
         {
-            move(2);
+            move(5);
         }
         
         eat();
