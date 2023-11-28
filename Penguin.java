@@ -8,6 +8,7 @@ public class Penguin extends Actor
     
     // Direction the penguin is facing
     String facing = "right";
+    SimpleTimer animationTimer = new SimpleTimer();
     
     // Constructor 
     public Penguin()
@@ -25,6 +26,8 @@ public class Penguin extends Actor
             idleLeft[i].scale(80,80);
         }
         
+        animationTimer.mark();
+        
         // Initial penguin
         setImage(idleRight[0]);
     }
@@ -33,6 +36,12 @@ public class Penguin extends Actor
     int imageIndex = 0;
     public void animatePenguin()
     {
+        if(animationTimer.millisElapsed() < 90)
+        {
+           return; 
+        }
+        animationTimer.mark();
+        
         if (facing.equals("right"))
         {
             setImage(idleRight[imageIndex]);
@@ -51,13 +60,13 @@ public class Penguin extends Actor
         
         if (Greenfoot.isKeyDown("left"))
         {
-            move(-5);
+            move(-3);
             facing = "left";
             animatePenguin();
         }
         if (Greenfoot.isKeyDown("right"))
         {
-            move(5);
+            move(3);
             facing = "right";
             animatePenguin();
         }
