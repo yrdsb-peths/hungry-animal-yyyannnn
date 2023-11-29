@@ -9,17 +9,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1, false);
-        
-        // Label startLabel = new Label("Start Game", 100);
-        // addObject(startLabel,300,200);
-        
-        // if(Greenfoot.mouseClicked(null))
-        // {
-            // removeObject(startLabel);
-            // create();
-        // }
-        
+        super(600, 400, 1, false);        
         create();
         
     }
