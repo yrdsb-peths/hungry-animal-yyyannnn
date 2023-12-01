@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish extends Actor
 {
+    int speed = 2;
+    
     // Contructor
     public Fish(){
         GreenfootImage image = new GreenfootImage("images/fish.png");
@@ -22,7 +24,9 @@ public class Fish extends Actor
     public void act()
     {
         // Fish falls downwards
-        setLocation(getX(),getY()+2);
+        int x = getX();
+        int y = getY() + speed;
+        setLocation(x,y);
         
         // Game over when it gets to bottom
         MyWorld world = (MyWorld) getWorld();
@@ -32,5 +36,9 @@ public class Fish extends Actor
             world.removeObject(this);
         }
         
+    }
+    
+    public void setSpeed(int spd){
+        speed = spd;
     }
 }
