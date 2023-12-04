@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
+    Bubble bubble = new Bubble();
     Label titleLabel = new Label("Hungry Penguin",60);
 
     /**
@@ -19,7 +20,8 @@ public class TitleScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
 
-        addObject(titleLabel,getWidth()/2,getHeight()/2);
+        addObject(bubble, getWidth()/2, 92);
+        addObject(titleLabel,getWidth()/2,92);
         prepare();
         act();
     }
@@ -49,5 +51,6 @@ public class TitleScreen extends World
         
         Label label2 = new Label("Press 'space' to start game", 30);
         addObject(label2,getWidth()/2,328);
+        
     }
 }

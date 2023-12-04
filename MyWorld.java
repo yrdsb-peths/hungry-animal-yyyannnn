@@ -6,6 +6,10 @@ public class MyWorld extends World
     Label scoreLabel;
     int level = 2;
     
+    /**
+     * Constructor
+     */
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -14,7 +18,7 @@ public class MyWorld extends World
         
     }
     
-    //create game objects
+    // Create game objects
     public void create()
     {
         // Create the fish object
@@ -28,14 +32,21 @@ public class MyWorld extends World
         createFish();
     }
     
-    //End the game
+    /**
+     * Creates game over label
+     */
     public void gameOver()
     {
-        Label gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel,300,200);
+        World world = new GameOver();
+        Greenfoot.setWorld(world);
+        
+        // Label gameOverLabel = new Label("Game Over", 100);
+        // addObject(gameOverLabel,300,200);
     }
     
-    // Increase score
+    /**
+     * Increases score and level
+     */
     public void increaseScore()
     {
         score++;
