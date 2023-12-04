@@ -85,4 +85,16 @@ public class Penguin extends Actor
             world.increaseScore();
         }
     }
+    
+    // Will crack egg if touching
+    public void touchingEgg()
+    {
+        if (isTouching(Egg.class))
+        {
+            removeTouching(Egg.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.createFish();
+            world.increaseScore();
+        }
+    }
 }

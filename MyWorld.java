@@ -5,6 +5,7 @@ public class MyWorld extends World
     public int score = 0;
     Label scoreLabel;
     int level = 2;
+    int numEggs = 0;
     
     /**
      * Constructor
@@ -33,15 +34,13 @@ public class MyWorld extends World
     }
     
     /**
-     * Creates game over label
+     * Go to game over world
      */
     public void gameOver()
     {
+        Greenfoot.delay(5);
         World world = new GameOver();
         Greenfoot.setWorld(world);
-        
-        // Label gameOverLabel = new Label("Game Over", 100);
-        // addObject(gameOverLabel,300,200);
     }
     
     /**
@@ -55,6 +54,12 @@ public class MyWorld extends World
         if (score % 5 == 0)
         {
             level++;
+            numEggs++;
+            
+            for(int i = 0; i < numEggs; i++)
+            {
+                createEgg();
+            }
         }
     }
     
@@ -65,5 +70,12 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(fish,x,y);
+    }
+    
+    public void createEgg(){
+        Egg egg = new Egg();
+        int x = Greenfoot.getRandomNumber(600);
+        int y = 0;
+        addObject(egg,x,y);
     }
 }

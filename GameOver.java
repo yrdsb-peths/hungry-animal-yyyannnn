@@ -18,5 +18,10 @@ public class GameOver extends World
         
         Label gameOverLabel = new Label("Game Over", 100);
         addObject(gameOverLabel,300,200);
+        
+        if(Greenfoot.mouseClicked(null)){
+            World world = new TitleScreen();
+            Greenfoot.setWorld(world);
+        }
     }
 }
