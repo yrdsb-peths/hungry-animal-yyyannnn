@@ -45,12 +45,14 @@ public class TitleScreen extends World
     {
         Penguin penguin = new Penguin();
         addObject(penguin,68,189);
-        
+
         Label label = new Label("Use \u2190 and \u2192 to move", 30);
         addObject(label,getWidth()/2,283);
-        
+
         Label label2 = new Label("Press 'space' to start game", 30);
         addObject(label2,getWidth()/2,328);
-        
+
+        Label label3 = new Label("Don't touch egg", 30);
+        addObject(label3,461,157);
     }
 }
