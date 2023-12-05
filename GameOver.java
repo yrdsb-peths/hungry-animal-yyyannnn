@@ -17,11 +17,15 @@ public class GameOver extends World
         super(600, 400, 1); 
         
         Label gameOverLabel = new Label("Game Over", 100);
-        addObject(gameOverLabel,300,200);
+        addObject(gameOverLabel,getWidth()/2,200);
         
-        if(Greenfoot.mouseClicked(null)){
-            World world = new TitleScreen();
-            Greenfoot.setWorld(world);
-        }
+        Label restartLabel = new Label("Click to restart", 30);
+        addObject(restartLabel,getWidth()/2,300);
+    }
+    
+    public void act(){
+       if(Greenfoot.mouseClicked(null)){
+            Greenfoot.setWorld(new TitleScreen());
+        }  
     }
 }

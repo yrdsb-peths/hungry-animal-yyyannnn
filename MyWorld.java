@@ -78,4 +78,13 @@ public class MyWorld extends World
         int y = 0;
         addObject(egg,x,y);
     }
+    
+    /**
+     * Let game restart 
+     */
+    public void restart(){
+        score = 0;
+        level = 2;
+        numEggs = 0;
+    }
 }
