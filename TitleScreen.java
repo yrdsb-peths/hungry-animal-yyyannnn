@@ -52,7 +52,7 @@ public class TitleScreen extends World
         Label label2 = new Label("Press 'space' to start game", 30);
         addObject(label2,getWidth()/2,328);
 
-        Label label3 = new Label("Don't touch egg", 30);
+        Label label3 = new Label("Don't touch the egg", 30);
         addObject(label3,461,157);
     }
 }

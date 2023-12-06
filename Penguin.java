@@ -60,13 +60,13 @@ public class Penguin extends Actor
         
         if (Greenfoot.isKeyDown("left"))
         {
-            move(-3);
+            move(-4);
             facing = "left";
             animatePenguin();
         }
         if (Greenfoot.isKeyDown("right"))
         {
-            move(3);
+            move(4);
             facing = "right";
             animatePenguin();
         }
