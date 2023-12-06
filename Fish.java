@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish extends Actor
 {
-    public int speed = 2;
+    public int speed = 1;
     
     // Contructor
     public Fish(){

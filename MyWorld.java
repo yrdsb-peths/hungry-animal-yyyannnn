@@ -4,7 +4,8 @@ public class MyWorld extends World
 {
     public int score = 0;
     Label scoreLabel;
-    int level = 2;
+    Label levelLabel;
+    int level = 1;
     int numEggs = 0;
     
     /**
@@ -27,8 +28,12 @@ public class MyWorld extends World
         addObject(linux,300,300);
         
         // Create a labal
-        scoreLabel = new Label(0,80);
-        addObject(scoreLabel,50,50);
+        scoreLabel = new Label("Score: " + score,50);
+        addObject(scoreLabel,90,38);
+        
+        levelLabel = new Label("Level: " + level,50);
+        addObject(levelLabel,90,77);
+        
         
         createFish();
     }
@@ -49,11 +54,12 @@ public class MyWorld extends World
     public void increaseScore()
     {
         score++;
-        scoreLabel.setValue(score);
+        scoreLabel.setValue("Score: " + score);
         
         if (score % 5 == 0)
         {
             level++;
+            levelLabel.setValue("Level: " + level);
             numEggs++;
             
             for(int i = 0; i < numEggs; i++)

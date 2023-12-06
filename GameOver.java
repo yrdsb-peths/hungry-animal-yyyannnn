@@ -21,6 +21,7 @@ public class GameOver extends World
         
         Label restartLabel = new Label("Click to restart", 30);
         addObject(restartLabel,getWidth()/2,300);
+        
     }
     
     public void act(){
