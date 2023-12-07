@@ -27,6 +27,9 @@ public class GameOver extends World
         
     }
     
+    /**
+     * Check if mouse is clicked. If so, will return to title screen.
+     */
     public void act(){
        if(Greenfoot.mouseClicked(null)){
             Greenfoot.setWorld(new TitleScreen());

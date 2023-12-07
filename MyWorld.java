@@ -11,7 +11,6 @@ public class MyWorld extends World
     /**
      * Constructor
      */
-    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -20,12 +19,14 @@ public class MyWorld extends World
         
     }
     
-    // Create game objects
+    /**
+     * Create game objects
+     */
     public void create()
     {
-        // Create the fish object
-        Penguin linux = new Penguin();
-        addObject(linux,300,300);
+        // Create the penguin object
+        Penguin penguin = new Penguin();
+        addObject(penguin,300,300);
         
         // Create a labal
         scoreLabel = new Label("Score: " + score,50);
@@ -36,6 +37,7 @@ public class MyWorld extends World
         
         
         createFish();
+        createSound();
     }
     
     /**
@@ -68,8 +70,9 @@ public class MyWorld extends World
             }
         }
     }
-    
-    // Create fish anywhere at the top of the screen
+    /**
+     * Create fish anywhere at the top of the screen
+     */
     public void createFish(){
         Fish fish = new Fish();
         fish.setSpeed(level);
@@ -78,6 +81,9 @@ public class MyWorld extends World
         addObject(fish,x,y);
     }
     
+    /**
+     * Create egg anywhere at the top of the screen
+     */
     public void createEgg(){
         Egg egg = new Egg();
         int x = Greenfoot.getRandomNumber(600);
@@ -86,11 +92,10 @@ public class MyWorld extends World
     }
     
     /**
-     * Let game restart 
+     * Create the sound button
      */
-    public void restart(){
-        score = 0;
-        level = 2;
-        numEggs = 0;
+    public void createSound(){
+        SoundButton soundButton = new SoundButton();
+        addObject(soundButton,570,35);
     }
 }

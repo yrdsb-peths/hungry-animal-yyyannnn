@@ -8,7 +8,9 @@ public class Fish extends Actor
 {
     public int speed = 1;
     
-    // Contructor
+    /**
+     * Contructor
+     */
     public Fish(){
         GreenfootImage image = new GreenfootImage("images/fish.png");
         image.scale(80,80);
@@ -16,8 +18,7 @@ public class Fish extends Actor
     }
     
     /**
-     * Act - do whatever the Fish wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Always falls downward and check if it fell out of the world 
      */
     public void act()
     {
@@ -36,6 +37,9 @@ public class Fish extends Actor
         
     }
     
+    /**
+     * Sets the speed of moving downward 
+     */
     public void setSpeed(int spd){
         speed = spd;
     }

@@ -1,10 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TitleScreen here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * What player will see when in the beginning.
  */
 public class TitleScreen extends World
 {
@@ -26,7 +23,9 @@ public class TitleScreen extends World
         act();
     }
 
-    // The main world act loop
+    /**
+     * The main world act loop
+     */
     public void act()
     {
         // Start the game if user presses the space bar

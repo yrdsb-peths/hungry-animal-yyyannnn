@@ -1,8 +1,11 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
+/**
+ * This is the main character of the game.
+ */
 public class Penguin extends Actor
 {
-    GreenfootSound penguinSound = new GreenfootSound("penguinSound.mp3");
+    static GreenfootSound penguinSound = new GreenfootSound("penguinSound.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[9];
     GreenfootImage[] idleLeft = new GreenfootImage[9];
     
@@ -10,7 +13,9 @@ public class Penguin extends Actor
     String facing = "right";
     SimpleTimer animationTimer = new SimpleTimer();
     
-    // Constructor 
+    /**
+     * Constructor 
+     */
     public Penguin()
     {
         for (int i = 0; i < idleRight.length; i++)
@@ -32,7 +37,9 @@ public class Penguin extends Actor
         setImage(idleRight[0]);
     }
     
-    // Animation
+    /**
+     * Animation for penguin
+     */
     int imageIndex = 0;
     public void animatePenguin()
     {
@@ -55,6 +62,9 @@ public class Penguin extends Actor
         
     }
     
+    /**
+     * Check if arrow keys are pressed and check if penguin will eat fish 
+     */
     public void act()
     {
         
@@ -74,7 +84,9 @@ public class Penguin extends Actor
         eat();
     }
     
-    //Will eat fish if touching and recreate it
+    /**
+     * Will play sound and eat fish if touching and recreate it 
+     */
     public void eat()
     {
         if (isTouching(Fish.class))
@@ -87,7 +99,9 @@ public class Penguin extends Actor
         }
     }
     
-    // Will crack egg if touching
+    /**
+     * Will crack egg if touching
+     */
     public void touchingEgg()
     {
         if (isTouching(Egg.class))
@@ -97,5 +111,12 @@ public class Penguin extends Actor
             world.createFish();
             world.increaseScore();
         }
+    }
+    
+    /**
+     * A static method that will set the volume of sound
+     */
+    public static void setVolume(int volume){
+        penguinSound.setVolume(volume);
     }
 }
