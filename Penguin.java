@@ -2,7 +2,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Penguin extends Actor
 {
-     //GreenfootSound penguinSound = new GreenfootSound("filename");
+    GreenfootSound penguinSound = new GreenfootSound("penguinSound.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[9];
     GreenfootImage[] idleLeft = new GreenfootImage[9];
     
@@ -79,10 +79,11 @@ public class Penguin extends Actor
     {
         if (isTouching(Fish.class))
         {
+            penguinSound.play();
             removeTouching(Fish.class);
             MyWorld world = (MyWorld) getWorld();
             world.createFish();
-            world.increaseScore();
+            world.increaseScore();            
         }
     }
     
