@@ -7,6 +7,7 @@ public class TitleScreen extends World
 {
     Bubble bubble = new Bubble();
     Label titleLabel = new Label("Hungry Penguin",60);
+    Label author = new Label("By Yan", 25);
 
     /**
      * Constructor for objects of class TitleScreen.
@@ -21,6 +22,7 @@ public class TitleScreen extends World
         addObject(titleLabel,getWidth()/2,92);
         prepare();
         act();
+        addObject(author, 155, 130);
     }
 
     /**
