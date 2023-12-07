@@ -3,14 +3,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Fish here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
 public class Fish extends Actor
 {
-    int speed = 2;
+    public int speed = 1;
     
-    // Contructor
+    /**
+     * Contructor
+     */
     public Fish(){
         GreenfootImage image = new GreenfootImage("images/fish.png");
         image.scale(80,80);
@@ -18,8 +18,7 @@ public class Fish extends Actor
     }
     
     /**
-     * Act - do whatever the Fish wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Always falls downward and check if it fell out of the world 
      */
     public void act()
     {
@@ -38,6 +37,9 @@ public class Fish extends Actor
         
     }
     
+    /**
+     * Sets the speed of moving downward 
+     */
     public void setSpeed(int spd){
         speed = spd;
     }
