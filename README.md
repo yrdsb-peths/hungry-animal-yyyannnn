@@ -1,18 +1,12 @@
-# Hungry Animal Tutorial
-This is the README.md file.
-Change this file to show your intended audience what you want them to see.
+# Hungry Penguin
 
-You can use **Markdown** syntax to format this file to do things like **bold** or *italicize* text.
-[Markdown basics](https://www.markdownguide.org/getting-started/)
+Press **space** to start game and use **left** and **right** arrows to move the penguin.
 
-This particular repository is the starting template for the Hungry Elephant tutorial.
+The goal of this game is to eat as many fish as possible without it fall out of the screen, and avoid touching any eggs.
 
-[Part 1: Greenfoot Basics](https://youtu.be/zxaa3X0MihI)
+When playing, you will see score and level. Score increases by one every time you eat a fish. Level increases the speed of the fish. It increases every 5 fish you've eaten.
+There is also a sound button at top right corner of the screen. You can choose to have the sound on or off of your choice.
 
-[Part 2: Game Enhancements](https://youtu.be/TwID9i0Ey6o)
+The game is over if you missed a fish and touched an egg. Click on screen to restart when game is over.
 
-[Part 3: Final Touches](https://youtu.be/GT-eFwa4Abc)
-
-Other features:
-- added a sound button
-- added a 'bomb' 
+**Have FUN!**
