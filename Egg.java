@@ -7,6 +7,7 @@ public class Egg extends Actor
 {
     GreenfootImage egg = new GreenfootImage("images/egg.png");
     GreenfootImage cookedEgg = new GreenfootImage("images/eggCooked.png");
+    public int speed = 1;
     public Egg(){
         egg.scale(30,50);
         cookedEgg.scale(80,80);
@@ -20,7 +21,7 @@ public class Egg extends Actor
     {
         // Egg falls downwards
         int x = getX();
-        int y = getY() + 2;
+        int y = getY() + speed;
         setLocation(x,y);
         
         
@@ -31,6 +32,10 @@ public class Egg extends Actor
             crack();
             world.gameOver();
         }
+        
+        if(getY() >= world.getHeight()){
+            world.removeObject(this);
+        }
     }
     
     /**
@@ -39,5 +44,9 @@ public class Egg extends Actor
     public void crack()
     {
         setImage(cookedEgg);
+    }
+    
+    public void setSpeed(int spd){
+        speed = spd;
     }
 }
